@@ -72,6 +72,8 @@ while(1):
 
     k = cv2.waitKey(1)
     if k == ord('s'):
+        if not os.path.isdir("drawing"):
+            os.mkdir("drawing")
         currtime = datetime.datetime.now()
         currtime_str = currtime.strftime("%d-%m-%Y %I-%M-%S %p")
         filename = 'drawing/' + currtime_str + '.png'
